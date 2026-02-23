@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ffdf00;
+  --bg-dark: #070707;
+  --sidebar-bg: #0d0d0d;
+  --card-bg: #121212;
+  --header-bg: #0a0a0a;
+  --accent-green: #4ade80;
+  --danger: #ef4444;
+  --border-color: #1a1a1a;
+}
+
+body {
+  @apply bg-bg-dark text-slate-50;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes rocket-move {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.matrix-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
