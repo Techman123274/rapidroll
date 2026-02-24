@@ -75,4 +75,30 @@ export const gameSounds = {
   bet() {
     playTone(440, 0.1, "sine", 0.2);
   },
+  /** Slot: spin start */
+  slotSpinStart() {
+    playTone(220, 0.08, "sawtooth", 0.15);
+    setTimeout(() => playTone(330, 0.1, "sine", 0.12), 60);
+  },
+  /** Slot: single reel stop */
+  slotReelStop() {
+    playTone(392, 0.06, "sine", 0.18);
+  },
+  /** Slot: small win */
+  slotSmallWin() {
+    playTone(523, 0.12, "sine", 0.2);
+    setTimeout(() => playTone(659, 0.15, "sine", 0.18), 80);
+  },
+  /** Slot: big win */
+  slotBigWin() {
+    [523, 659, 784, 1047].forEach((f, i) => {
+      setTimeout(() => playTone(f, 0.25, "sine", 0.22), i * 120);
+    });
+  },
+  /** Slot: bonus / scatter trigger */
+  slotBonusTrigger() {
+    playTone(880, 0.15, "sine", 0.25);
+    setTimeout(() => playTone(1320, 0.2, "sine", 0.2), 100);
+    setTimeout(() => playTone(1760, 0.25, "sine", 0.18), 220);
+  },
 };

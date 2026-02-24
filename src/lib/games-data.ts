@@ -89,4 +89,15 @@ export const DEFAULT_GAMES: SeedGame[] = [
     hot: true,
     order: 6,
   },
+  {
+    title: "Cyber Crime",
+    slug: "cyber-crime",
+    thumbnail: "/games/cyber-crime/game_title/Game_Title_title_1771854534046_1.png",
+    category: "Slots",
+    provider: "Rapid Originals",
+    providerUrl: "/games/cyber-crime",
+    featured: true,
+    hot: true,
+    order: 7,
+  },
 ];

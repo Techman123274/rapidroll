@@ -13,6 +13,7 @@ const CARD_GRADIENTS: Record<string, string> = {
   "crypto-mines": "from-purple-900/80 to-indigo-950",
   "lunar-crash": "from-blue-900/80 to-cyan-950",
   "quantum-roulette": "from-amber-900/50 to-orange-950",
+  "cyber-crime": "from-cyan-900/80 to-violet-950",
   default: "from-[#1a1a1a] to-[#0d0d0d]",
 };
 
@@ -28,9 +29,10 @@ export default function GameCard({
   const hasValidThumbnail =
     thumbnail.startsWith("http") && !thumbnail.includes("/games/");
 
+  const href = slug === "cyber-crime" ? "/games/cyber-crime" : `/game/${slug}`;
   return (
     <Link
-      href={`/game/${slug}`}
+      href={href}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#1a1a1a] bg-[#121212] transition-all hover:-translate-y-1 hover:border-[#333]"
     >
       <div
